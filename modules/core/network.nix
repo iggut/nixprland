@@ -20,5 +20,10 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ networkmanagerapplet ];
+  environment.systemPackages = with pkgs; [ 
+    # --- Network Utilities ---
+    networkmanagerapplet # Network Management Tray
+    wget                 # Command-Line Web Downloader
+    curl                 # Command-Line HTTP Client
+  ];
 }
