@@ -1,4 +1,14 @@
-{pkgs, ...}: {
+{ pkgs, inputs, ...}: let
+
+  python-packages = pkgs.python3.withPackages (
+    ps:
+      with ps; [
+        requests
+        pyquery # needed for hyprland-dots Weather script
+        ]
+    );
+
+  in {
   programs = {
     firefox.enable = false; # Firefox is not installed by defualt
     dconf.enable = true;
@@ -16,15 +26,18 @@
     thunar = {
       enable = true;
       plugins = with pkgs.xfce; [
-        thunar-archive-plugin
-        thunar-volman
+		    exo
+		    mousepad
+		    thunar-archive-plugin
+		    thunar-volman
+		    tumbler
       ];
     };
   };
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     # --- Terminal Utilities ---
     amfora             # Fancy Terminal Browser For Gemini Protocol
     cmatrix            # Matrix Movie Effect In Terminal
@@ -79,7 +92,7 @@
     jq                 # JSON Processor/Formatter
 
     # --- Hyprland Ecosystem ---
-    ags_1              # Desktop Overview (AGS)
+    #ags_1              # Desktop Overview (AGS)
     cava               # Audio Spectrum Visualizer
     cliphist           # Clipboard History Manager
     hypridle           # Idle Management Daemon
@@ -93,8 +106,8 @@
     # --- System Configuration ---
     greetd.tuigreet    # TUI Login Manager
     gtk-engine-murrine # GTK Theme Engine
-    kdePackages.qt5ct  # Qt5 Configuration Tool
-    kdePackages.qt6ct  # Qt6 Configuration Tool
+    libsForQt5.qt5ct  # Qt5 Configuration Tool
+    qt6ct  # Qt6 Configuration Tool
     libsForQt5.qtstyleplugin-kvantum # Kvantum Theme Engine
     nwg-look           # GTK Theme Switcher
     wallust            # Wallpaper Color Generator
@@ -138,5 +151,7 @@
     xdg-user-dirs      # Standard User Directories
     xdg-utils          # Desktop Integration Tools
     wlogout            # Wayland Logout Menu
+  ]) ++ [
+	  python-packages
   ];
 }
