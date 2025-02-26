@@ -39,7 +39,6 @@
   ];
 
   # Required permissions
-  boot.kernelModules = [ "uinput" "kvm-intel" ];
   services.udev.packages = [ pkgs.input-remapper ];
   users.users.iggut.extraGroups = [ 
     "input" 
