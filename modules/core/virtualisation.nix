@@ -33,7 +33,6 @@
     spice-vdagent
 
     # Added per request
-    flatseal
     boxbuddy
     waydroid
   ];
