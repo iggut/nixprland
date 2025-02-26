@@ -31,7 +31,5 @@
     PROTON_ENABLE_NVAPI = 1;
   };
 
-  # Kernel tweaks
-  boot.kernelPackages = pkgs.linuxPackages_xanmod;
-  boot.kernelParams = [ "preempt=full" ];
+
 }
