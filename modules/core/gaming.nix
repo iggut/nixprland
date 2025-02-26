@@ -9,9 +9,9 @@
     mangohud
     goverlay
     gamescope
-    # Proton versions
-    protonup
-    proton-ge-custom
+    # Proton toolls
+    protonup-ng
+    protonup-qt
     # Vulkan tools
     vulkan-tools
     vulkan-loader
