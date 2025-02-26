@@ -17,7 +17,6 @@ in {
       # Input Remapper service
     input-remapper = {
       enable = true;
-      auto-load = true;
     };
 
     xserver = {
