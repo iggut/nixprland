@@ -3,6 +3,7 @@
     ../../hosts/${host}
     ../../modules/drivers
     ../../modules/core
+    ../../modules/core/gamemode.nix
   ];
   # Enable GPU Drivers
   drivers.amdgpu.enable = false;

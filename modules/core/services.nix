@@ -14,6 +14,11 @@ in {
     openssh.enable = true;
     flatpak.enable = true;
     blueman.enable = true;
+      # Input Remapper service
+    input-remapper = {
+      enable = true;
+      auto-load = true;
+    };
 
     xserver = {
       enable = false;
