@@ -109,7 +109,7 @@ in {
         "$modifier ALT,W,exec,wallsetter"
         "$modifier SHIFT,N,exec,swaync-client -rs"
         "$modifier,W,exec,${browser}"
-        "$modifier,E,exec,emopicker9000"
+        "$modifier,E,exec,thunar"
         "$modifier,S,exec,screenshootin"
         "$modifier,D,exec,discord"
         "$modifier,O,exec,obs"
@@ -181,8 +181,12 @@ in {
       ];
 
       bindm = [
-        "$modifier, mouse:272, movewindow"
-        "$modifier, mouse:273, resizewindow"
+        "$modifier, mouse:276, movewindow"
+        "$modifier, mouse:275, resizewindow"
+      ];
+
+      bindr = [
+        "$modifier, $modifier_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
       ];
 
       windowrulev2 = [
@@ -263,6 +267,11 @@ in {
         "QT_AUTO_SCREEN_SCALE_FACTOR, 1"
         "SDL_VIDEODRIVER, x11"
         "MOZ_ENABLE_WAYLAND, 1"
+        "LIBVA_DRIVER_NAME, nvidia"
+        "GBM_BACKEND, nvidia-drm"
+        "__GLX_VENDOR_LIBRARY_NAME, nvidia"
+        "__EGL_VENDOR_LIBRARY_FILENAMES, /usr/share/glvnd/egl_vendor.d/10_nvidia.json"
+        "NVD_BACKEND, direct"
       ];
     };
 
