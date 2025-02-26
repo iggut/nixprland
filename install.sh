@@ -186,12 +186,7 @@ printf "\n%.0s" {1..3}
 # KooL's Dots installation
 printf "$NOTE Downloading Hyprland-Dots to HOME folder..\n"
 if [ -d ~/Hyprland-Dots ]; then
-  cd ~/Hyprland-Dots
-  git stash
-  git pull
-  git stash apply
-  chmod +x copy.sh
-  ./copy.sh 
+  rm -rf "~/Hyprland-Dots" 
 else
   if git clone --depth 1 https://github.com/iggut/Hyprland-Dots ~/Hyprland-Dots; then
     cd ~/Hyprland-Dots || exit 1
