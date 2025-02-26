@@ -40,13 +40,6 @@
 
   # Required permissions
   services.udev.packages = [ pkgs.input-remapper ];
-  users.users.iggut.extraGroups = [ 
-    "input" 
-    "uinput" 
-    "libvirtd" 
-    "kvm" 
-    "qemu-libvirtd" 
-  ];
 
   # Waydroid udev rules
   services.udev.extraRules = ''
