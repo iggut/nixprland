@@ -36,10 +36,6 @@ in {
       "networkmanager"
       "scanner"
       "wheel"
-      "input" 
-      "uinput" 
-      "kvm" 
-      "qemu-libvirtd" 
     ];
     shell = pkgs.zsh;
     ignoreShellProgramCheck = true;

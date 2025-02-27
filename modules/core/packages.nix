@@ -104,7 +104,6 @@
     swww               # Animated Wallpaper Engine
 
     # --- System Configuration ---
-    input-remapper
     greetd.tuigreet    # TUI Login Manager
     gtk-engine-murrine # GTK Theme Engine
     libsForQt5.qt5ct  # Qt5 Configuration Tool

@@ -5,10 +5,7 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = false;
       gamescopeSession.enable = true;
-      extraCompatPackages = [ 
-        pkgs.proton-ge-bin
-        inputs.nix-proton-cachyos.packages.${system}.proton-cachyos
-      ];
+      extraCompatPackages = [pkgs.proton-ge-bin];
     };
 
     gamescope = {

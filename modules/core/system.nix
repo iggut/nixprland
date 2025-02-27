@@ -13,7 +13,7 @@ in {
       trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     };
   };
-  time.timeZone = "America/New-York";
+  time.timeZone = "America/Chicago";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
@@ -27,9 +27,6 @@ in {
     LC_TIME = "en_US.UTF-8";
   };
   environment.variables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/iggut/.steam/root/compatibilitytools.d";
-    NIX_SHELL_PRESERVE_PROMPT = 1;
-    LIBVIRT_DEFAULT_URI = "qemu:///system";
     nixprland_VERSION = "2.3";
     nixprland = "true";
   };

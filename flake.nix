@@ -9,7 +9,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/release-24.11";
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix/release-24.11";
-    nix-proton-cachyos.url = "github:kimjongbing/nix-proton-cachyos";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let

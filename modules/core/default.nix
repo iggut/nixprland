@@ -7,7 +7,6 @@
   imports = [
     ./boot.nix
     ./fonts.nix
-    ./gaming.nix
     ./hardware.nix
     ./network.nix
     ./nh.nix

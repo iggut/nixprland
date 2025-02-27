@@ -13,7 +13,6 @@
     keyboard.qmk.enable = true;
     bluetooth.enable = true;
     bluetooth.powerOnBoot = true;
-    uinput.enable = true;
   };
   local.hardware-clock.enable = false;
 }

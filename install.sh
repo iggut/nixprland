@@ -128,8 +128,8 @@ fi
 sed -i "/^\s*consoleKeyMap[[:space:]]*=[[:space:]]*\"/s/\"\(.*\)\"/\"$consoleKeyMap\"/" ./hosts/$hostName/variables.nix
 
 echo "-----"
-CURRENT_USER=$(whoami)
-sed -i "/^\s*username[[:space:]]*=[[:space:]]*\"/s/\"\(.*\)\"/\"$CURRENT_USER\"/" ./flake.nix
+
+sed -i "/^\s*username[[:space:]]*=[[:space:]]*\"/s/\"\(.*\)\"/\"$installusername\"/" ./flake.nix
 
 echo "-----"
 
@@ -186,7 +186,12 @@ printf "\n%.0s" {1..3}
 # KooL's Dots installation
 printf "$NOTE Downloading Hyprland-Dots to HOME folder..\n"
 if [ -d ~/Hyprland-Dots ]; then
-  rm -rf "~/Hyprland-Dots" 
+  cd ~/Hyprland-Dots
+  git stash
+  git pull
+  git stash apply
+  chmod +x copy.sh
+  ./copy.sh 
 else
   if git clone --depth 1 https://github.com/iggut/Hyprland-Dots ~/Hyprland-Dots; then
     cd ~/Hyprland-Dots || exit 1
