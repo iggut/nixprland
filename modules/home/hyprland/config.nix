@@ -109,7 +109,7 @@ in {
         "$modifier ALT,W,exec,wallsetter"
         "$modifier SHIFT,N,exec,swaync-client -rs"
         "$modifier,W,exec,${browser}"
-        "$modifier,E,exec,emopicker9000"
+        "$modifier,E,exec,thunar"
         "$modifier,S,exec,screenshootin"
         "$modifier,D,exec,discord"
         "$modifier,O,exec,obs"
@@ -181,8 +181,8 @@ in {
       ];
 
       bindm = [
-        "$modifier, mouse:272, movewindow"
-        "$modifier, mouse:273, resizewindow"
+        "$modifier, mouse:276, movewindow"
+        "$modifier, mouse:275, resizewindow"
       ];
 
       windowrulev2 = [

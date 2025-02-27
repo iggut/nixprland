@@ -10,6 +10,7 @@
     ./hardware.nix
     ./network.nix
     ./nh.nix
+    ./gaming.nix
     ./packages.nix
     ./services.nix
     ./starfish.nix
