@@ -24,12 +24,7 @@
     extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
   };
 
-  # Environment variables for gaming
-  environment.sessionVariables = {
-    VKD3D_CONFIG = "dxr11";
-    RADV_PERFTEST = "sam";
-    PROTON_ENABLE_NVAPI = 1;
-  };
+
 
 
 }

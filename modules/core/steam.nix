@@ -7,8 +7,7 @@
       gamescopeSession.enable = true;
       extraCompatPackages = [ 
         pkgs.proton-ge-bin
-        pkgs.protonup-ng
-        pkgs.protonup-qt
+        inputs.nix-proton-cachyos.packages.${system}.proton-cachyos
       ];
     };
 
